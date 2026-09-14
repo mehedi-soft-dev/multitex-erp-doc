@@ -1,0 +1,920 @@
+{"from": "mod:commercial", "to": "feat:cm-acpt-of-import-bill", "type": "CONTAINS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "svc:ICM_IMP_BILL_OF_EX_HService / CM_IMP_BILL_OF_EX_HService", "type": "USES_SERVICE"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "mvc:CmrController.AcptOfImportBillList", "type": "EXPOSES"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "api:GET:api/cmr/ImportBill/SelectAllImpBill/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportBill/SelectAllImpBill/{pageNo}/{pageSize}", "to": "svc:ICM_IMP_BILL_OF_EX_HService / CM_IMP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "api:GET:api/cmr/ImportBill/GetAcptOfImportBillInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportBill/GetAcptOfImportBillInfo", "to": "svc:ICM_IMP_BILL_OF_EX_HService / CM_IMP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "api:POST:api/cmr/ImportBill/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportBill/Save", "to": "svc:ICM_IMP_BILL_OF_EX_HService / CM_IMP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "api:POST:api/cmr/ImportBill/UpdateExtMaturityDate", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportBill/UpdateExtMaturityDate", "to": "svc:ICM_IMP_BILL_OF_EX_HService / CM_IMP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "api:POST:api/cmr/ImportBill/SaveIFDBCGL", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportBill/SaveIFDBCGL", "to": "svc:ICM_IMP_BILL_OF_EX_HService / CM_IMP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "api:POST:api/cmr/ImportBill/SavePaymentGL", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportBill/SavePaymentGL", "to": "svc:ICM_IMP_BILL_OF_EX_HService / CM_IMP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "api:POST:api/cmr/ImportBill/DeleteBoE", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportBill/DeleteBoE", "to": "svc:ICM_IMP_BILL_OF_EX_HService / CM_IMP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "api:POST:api/cmr/ImportBill/SendB2BPaymentApvReqMail/{pCM_IMP_BILL_OF_EX_H_ID}/{pRF_ACTN_STATUS_ID}", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportBill/SendB2BPaymentApvReqMail/{pCM_IMP_BILL_OF_EX_H_ID}/{pRF_ACTN_STATUS_ID}", "to": "svc:ICM_IMP_BILL_OF_EX_HService / CM_IMP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "proc:PKG_CM_IMPORT_BILL.CM_IMP_BILL_OF_EX_H_INSERT", "type": "CALLS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "proc:PKG_CM_IMPORT_BILL.CM_IMP_BILL_OF_EX_H_SELECT", "type": "CALLS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "proc:PKG_CM_IMPORT_BILL.CM_IMP_BILL_OF_EX_H_DELETE", "type": "CALLS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "proc:PKG_CM_IMPORT_BILL.CM_IMP_BILL_OF_EX_H_IFDBCGL", "type": "CALLS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "proc:PKG_CM_IMPORT_BILL.CM_IMP_BILL_OF_EX_H_PAYMENTGL", "type": "CALLS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "proc:PKG_CM_IMPORT_BILL.CM_IMP_BILL_OF_EX_H_EXT_MAT_DT_UPDATE", "type": "CALLS"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "tbl:CM_IMP_BILL_OF_EX_H", "type": "USES_TABLE"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "tbl:CM_IMP_BILL_OF_EX_H_STS", "type": "USES_TABLE"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "model:CM_IMP_BILL_OF_EX_HModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-acpt-of-import-bill", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "mod:commercial", "to": "feat:cm-bank-bill-coll", "type": "CONTAINS"}
+{"from": "feat:cm-bank-bill-coll", "to": "svc:ICM_EXP_BNK_BILL_COLL_HService / CM_EXP_BNK_BILL_COLL_HService, ICM_EXP_BNK_BILL_COLL_DService / CM_EXP_BNK_BILL_COLL_DService", "type": "USES_SERVICE"}
+{"from": "feat:cm-bank-bill-coll", "to": "mvc:CmrController.BankBillCollList", "type": "EXPOSES"}
+{"from": "feat:cm-bank-bill-coll", "to": "api:GET:api/cmr/ExportBill/GetBankBillCollectionList/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetBankBillCollectionList/{pageNo}/{pageSize}", "to": "svc:ICM_EXP_BNK_BILL_COLL_HService / CM_EXP_BNK_BILL_COLL_HService, ICM_EXP_BNK_BILL_COLL_DService / CM_EXP_BNK_BILL_COLL_DService", "type": "INJECTS"}
+{"from": "feat:cm-bank-bill-coll", "to": "api:POST:api/cmr/ExportBill/SaveBankBillCollection", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/SaveBankBillCollection", "to": "svc:ICM_EXP_BNK_BILL_COLL_HService / CM_EXP_BNK_BILL_COLL_HService, ICM_EXP_BNK_BILL_COLL_DService / CM_EXP_BNK_BILL_COLL_DService", "type": "INJECTS"}
+{"from": "feat:cm-bank-bill-coll", "to": "api:GET:api/cmr/ExportBill/GetBankBillCollectionInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetBankBillCollectionInfo", "to": "svc:ICM_EXP_BNK_BILL_COLL_HService / CM_EXP_BNK_BILL_COLL_HService, ICM_EXP_BNK_BILL_COLL_DService / CM_EXP_BNK_BILL_COLL_DService", "type": "INJECTS"}
+{"from": "feat:cm-bank-bill-coll", "to": "api:GET:api/cmr/ExportBill/GetBankBillCollectionDetail", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetBankBillCollectionDetail", "to": "svc:ICM_EXP_BNK_BILL_COLL_HService / CM_EXP_BNK_BILL_COLL_HService, ICM_EXP_BNK_BILL_COLL_DService / CM_EXP_BNK_BILL_COLL_DService", "type": "INJECTS"}
+{"from": "feat:cm-bank-bill-coll", "to": "api:POST:api/cmr/ExportBill/DeleteBankBillCollection", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/DeleteBankBillCollection", "to": "svc:ICM_EXP_BNK_BILL_COLL_HService / CM_EXP_BNK_BILL_COLL_HService, ICM_EXP_BNK_BILL_COLL_DService / CM_EXP_BNK_BILL_COLL_DService", "type": "INJECTS"}
+{"from": "feat:cm-bank-bill-coll", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BNK_BILL_COLL_H_INSERT", "type": "CALLS"}
+{"from": "feat:cm-bank-bill-coll", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BNK_BILL_COLL_H_SELECT", "type": "CALLS"}
+{"from": "feat:cm-bank-bill-coll", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BNK_BILL_COLL_H_DELETE", "type": "CALLS"}
+{"from": "feat:cm-bank-bill-coll", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BNK_BILL_COLL_D_SELECT", "type": "CALLS"}
+{"from": "feat:cm-bank-bill-coll", "to": "tbl:CM_EXP_BNK_BILL_COLL_H", "type": "USES_TABLE"}
+{"from": "feat:cm-bank-bill-coll", "to": "tbl:CM_EXP_BNK_BILL_COLL_D", "type": "USES_TABLE"}
+{"from": "feat:cm-bank-bill-coll", "to": "model:CM_EXP_BNK_BILL_COLL_HModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-bank-bill-coll", "to": "model:CM_EXP_BNK_BILL_COLL_DModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-bank-bill-coll", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:cm-bill-of-exchange", "to": "feat:cm-bank-bill-coll", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:commercial-bill-of-entry", "type": "CONTAINS"}
+{"from": "feat:commercial-bill-of-entry", "to": "svc:ICM_BILL_OF_ENTRYService / CM_BILL_OF_ENTRYService", "type": "USES_SERVICE"}
+{"from": "feat:commercial-bill-of-entry", "to": "mvc:CmrController.BillOfEntry", "type": "EXPOSES"}
+{"from": "feat:commercial-bill-of-entry", "to": "api:POST:api/cmr/ImportLC/SaveBoE", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportLC/SaveBoE", "to": "svc:ICM_BILL_OF_ENTRYService / CM_BILL_OF_ENTRYService", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-entry", "to": "api:GET:api/cmr/ImportLC/GetBillOfEntryInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLC/GetBillOfEntryInfo", "to": "svc:ICM_BILL_OF_ENTRYService / CM_BILL_OF_ENTRYService", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-entry", "to": "api:GET:api/cmr/ImportLC/GetBillOfEntryDetailsInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLC/GetBillOfEntryDetailsInfo", "to": "svc:ICM_BILL_OF_ENTRYService / CM_BILL_OF_ENTRYService", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-entry", "to": "api:GET:api/cmr/ImportLC/SelectAllBillEntry/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLC/SelectAllBillEntry/{pageNo}/{pageSize}", "to": "svc:ICM_BILL_OF_ENTRYService / CM_BILL_OF_ENTRYService", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-entry", "to": "api:GET:api/cmr/ImportLC/GetImportLcPiByBBLC", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLC/GetImportLcPiByBBLC", "to": "svc:ICM_BILL_OF_ENTRYService / CM_BILL_OF_ENTRYService", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-entry", "to": "api:GET:api/cmr/ImportLC/GetImportLcPIItem", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLC/GetImportLcPIItem", "to": "svc:ICM_BILL_OF_ENTRYService / CM_BILL_OF_ENTRYService", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-entry", "to": "proc:PKG_CM_IMPORT_LC.cm_bill_of_entry_insert", "type": "CALLS"}
+{"from": "feat:commercial-bill-of-entry", "to": "proc:PKG_CM_IMPORT_LC.cm_bill_of_entry_select", "type": "CALLS"}
+{"from": "feat:commercial-bill-of-entry", "to": "proc:PKG_CM_IMPORT_LC.cm_bill_of_entry_delete", "type": "CALLS"}
+{"from": "feat:commercial-bill-of-entry", "to": "proc:PKG_CM_IMPORT_LC.CM_BILL_OF_ENTRY_UPDT_DOC_PATH", "type": "CALLS"}
+{"from": "feat:commercial-bill-of-entry", "to": "proc:PKG_CM_IMPORT_LC.CM_IMP_LC_H_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-bill-of-entry", "to": "tbl:CM_BILL_OF_ENTRY", "type": "USES_TABLE"}
+{"from": "feat:commercial-bill-of-entry", "to": "tbl:CM_BILL_OF_ENTRY_D", "type": "USES_TABLE"}
+{"from": "feat:commercial-bill-of-entry", "to": "model:CM_BILL_OF_ENTRYModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-bill-of-entry", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "mod:commercial", "to": "feat:cm-bill-of-exchange", "type": "CONTAINS"}
+{"from": "feat:cm-bill-of-exchange", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService (header), ICM_EXP_BILL_OF_EX_DService / CM_EXP_BILL_OF_EX_DService (detail)", "type": "USES_SERVICE"}
+{"from": "feat:cm-bill-of-exchange", "to": "mvc:CmrController.BillOfExchangeList", "type": "EXPOSES"}
+{"from": "feat:cm-bill-of-exchange", "to": "api:GET:api/cmr/ExportBill/GetBillOfExchangeList/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetBillOfExchangeList/{pageNo}/{pageSize}", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService (header), ICM_EXP_BILL_OF_EX_DService / CM_EXP_BILL_OF_EX_DService (detail)", "type": "INJECTS"}
+{"from": "feat:cm-bill-of-exchange", "to": "api:GET:api/cmr/ExportBill/GetBillOfExchangeInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetBillOfExchangeInfo", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService (header), ICM_EXP_BILL_OF_EX_DService / CM_EXP_BILL_OF_EX_DService (detail)", "type": "INJECTS"}
+{"from": "feat:cm-bill-of-exchange", "to": "api:GET:api/cmr/ExportBill/GetBillOfExchangeDtl", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetBillOfExchangeDtl", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService (header), ICM_EXP_BILL_OF_EX_DService / CM_EXP_BILL_OF_EX_DService (detail)", "type": "INJECTS"}
+{"from": "feat:cm-bill-of-exchange", "to": "api:POST:api/cmr/ExportBill/SaveBOE", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/SaveBOE", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService (header), ICM_EXP_BILL_OF_EX_DService / CM_EXP_BILL_OF_EX_DService (detail)", "type": "INJECTS"}
+{"from": "feat:cm-bill-of-exchange", "to": "api:POST:api/cmr/ExportBill/SaveAdvBOE", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/SaveAdvBOE", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService (header), ICM_EXP_BILL_OF_EX_DService / CM_EXP_BILL_OF_EX_DService (detail)", "type": "INJECTS"}
+{"from": "feat:cm-bill-of-exchange", "to": "api:POST:api/cmr/ExportBill/SaveDate", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/SaveDate", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService (header), ICM_EXP_BILL_OF_EX_DService / CM_EXP_BILL_OF_EX_DService (detail)", "type": "INJECTS"}
+{"from": "feat:cm-bill-of-exchange", "to": "api:GET:api/cmr/ExportBill/GetPaymentRcvExpBillOfExchangeByFilter/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetPaymentRcvExpBillOfExchangeByFilter/{pageNo}/{pageSize}", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService (header), ICM_EXP_BILL_OF_EX_DService / CM_EXP_BILL_OF_EX_DService (detail)", "type": "INJECTS"}
+{"from": "feat:cm-bill-of-exchange", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BILL_OF_EX_H_SELECT", "type": "CALLS"}
+{"from": "feat:cm-bill-of-exchange", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BILL_OF_EX_H_INSERT", "type": "CALLS"}
+{"from": "feat:cm-bill-of-exchange", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BILL_OF_EX_H_ADV_INSERT", "type": "CALLS"}
+{"from": "feat:cm-bill-of-exchange", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BILL_OF_EX_D_SELECT", "type": "CALLS"}
+{"from": "feat:cm-bill-of-exchange", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BILL_OF_EX_PI_PO_REF_SELECT", "type": "CALLS"}
+{"from": "feat:cm-bill-of-exchange", "to": "proc:PKG_CM_EXPORT_BILL.BBC_CHK_BOE_EXIST_BY_TYPE", "type": "CALLS"}
+{"from": "feat:cm-bill-of-exchange", "to": "tbl:CM_EXP_BILL_OF_EX_H", "type": "USES_TABLE"}
+{"from": "feat:cm-bill-of-exchange", "to": "tbl:CM_EXP_BILL_OF_EX_D", "type": "USES_TABLE"}
+{"from": "feat:cm-bill-of-exchange", "to": "tbl:CM_EXP_BILL_OF_EX_PI_PO_REF", "type": "USES_TABLE"}
+{"from": "feat:cm-bill-of-exchange", "to": "tbl:CM_EXP_BILL_OF_EX_FORWARD", "type": "USES_TABLE"}
+{"from": "feat:cm-bill-of-exchange", "to": "tbl:CM_EXP_BOE_ADV_BILL_COLL", "type": "USES_TABLE"}
+{"from": "feat:cm-bill-of-exchange", "to": "tbl:CM_EXP_COM_ADV_H", "type": "USES_TABLE"}
+{"from": "feat:cm-bill-of-exchange", "to": "model:CM_EXP_BILL_OF_EX_HModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-bill-of-exchange", "to": "model:CM_EXP_BILL_OF_EX_HSlimModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-bill-of-exchange", "to": "model:CM_EXP_BILL_OF_EX_HFilterModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-bill-of-exchange", "to": "model:CM_EXP_BILL_OF_EX_DModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-bill-of-exchange", "to": "model:CM_EXP_BILL_OF_EX_H_DATE_Model", "type": "MAPS_ROW"}
+{"from": "feat:cm-bill-of-exchange", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "mod:commercial", "to": "feat:commercial-bill-of-export", "type": "CONTAINS"}
+{"from": "feat:commercial-bill-of-export", "to": "svc:ICM_BILL_OF_EXPORT_SERVICES / CM_BILL_OF_EXPORT_SERVICES", "type": "USES_SERVICE"}
+{"from": "feat:commercial-bill-of-export", "to": "mvc:CmrController.BillofExportList", "type": "EXPOSES"}
+{"from": "feat:commercial-bill-of-export", "to": "api:GET:api/cmr/BillOfExport/SelectAll/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/BillOfExport/SelectAll/{pageNo}/{pageSize}", "to": "svc:ICM_BILL_OF_EXPORT_SERVICES / CM_BILL_OF_EXPORT_SERVICES", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-export", "to": "api:GET:api/cmr/BillOfExport/GetInvoiceDetails", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/BillOfExport/GetInvoiceDetails", "to": "svc:ICM_BILL_OF_EXPORT_SERVICES / CM_BILL_OF_EXPORT_SERVICES", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-export", "to": "api:GET:api/cmr/BillOfExport/GetBillOfExportFormData", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/BillOfExport/GetBillOfExportFormData", "to": "svc:ICM_BILL_OF_EXPORT_SERVICES / CM_BILL_OF_EXPORT_SERVICES", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-export", "to": "api:GET:api/cmr/BillOfExport/GetBillOfExportParticularData", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/BillOfExport/GetBillOfExportParticularData", "to": "svc:ICM_BILL_OF_EXPORT_SERVICES / CM_BILL_OF_EXPORT_SERVICES", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-export", "to": "api:GET:api/cmr/BillOfExport/GetBillOfExportDetails", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/BillOfExport/GetBillOfExportDetails", "to": "svc:ICM_BILL_OF_EXPORT_SERVICES / CM_BILL_OF_EXPORT_SERVICES", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-export", "to": "api:POST:api/cmr/BillOfExport/SaveBillOfExport", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/BillOfExport/SaveBillOfExport", "to": "svc:ICM_BILL_OF_EXPORT_SERVICES / CM_BILL_OF_EXPORT_SERVICES", "type": "INJECTS"}
+{"from": "feat:commercial-bill-of-export", "to": "proc:PKG_CM_BILL_OF_EXPORT.CM_BILL_OF_EXP_H_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-bill-of-export", "to": "proc:PKG_CM_BILL_OF_EXPORT.CM_BILL_OF_EXP_H_INSERT", "type": "CALLS"}
+{"from": "feat:commercial-bill-of-export", "to": "proc:PKG_CM_BILL_OF_EXPORT.CM_BILL_OF_EXPORT_PARTICULAR_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-bill-of-export", "to": "proc:PKG_CM_BILL_OF_EXPORT.CM_BILL_OF_EXP_H_DELETE_ATTACHMENT", "type": "CALLS"}
+{"from": "feat:commercial-bill-of-export", "to": "tbl:CM_BILL_OF_EXP_H", "type": "USES_TABLE"}
+{"from": "feat:commercial-bill-of-export", "to": "tbl:CM_BILL_OF_EXP_H_STS", "type": "USES_TABLE"}
+{"from": "feat:commercial-bill-of-export", "to": "tbl:CM_BILL_OF_EXP_D", "type": "USES_TABLE"}
+{"from": "feat:commercial-bill-of-export", "to": "tbl:CM_BILL_OF_EXP_PARTICULAR_D", "type": "USES_TABLE"}
+{"from": "feat:commercial-bill-of-export", "to": "model:CM_BILL_OF_EXP_H_MODEL", "type": "MAPS_ROW"}
+{"from": "feat:commercial-bill-of-export", "to": "model:BILL_OF_EXPORT_DOC_MODEL", "type": "MAPS_ROW"}
+{"from": "feat:commercial-bill-of-export", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "mod:commercial", "to": "feat:commercial-buyer-notify-party", "type": "CONTAINS"}
+{"from": "feat:commercial-buyer-notify-party", "to": "svc:ICM_NOTIFY_PARTYService / CM_NOTIFY_PARTYService", "type": "USES_SERVICE"}
+{"from": "feat:commercial-buyer-notify-party", "to": "mvc:CmrController.BuyerNotifyParty", "type": "EXPOSES"}
+{"from": "feat:commercial-buyer-notify-party", "to": "api:GET:api/cmr/BuyerNotifyParty/GetBuyerNotifyPartyInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/BuyerNotifyParty/GetBuyerNotifyPartyInfo", "to": "svc:ICM_NOTIFY_PARTYService / CM_NOTIFY_PARTYService", "type": "INJECTS"}
+{"from": "feat:commercial-buyer-notify-party", "to": "api:POST:api/cmr/BuyerNotifyParty/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/BuyerNotifyParty/Save", "to": "svc:ICM_NOTIFY_PARTYService / CM_NOTIFY_PARTYService", "type": "INJECTS"}
+{"from": "feat:commercial-buyer-notify-party", "to": "proc:PKG_CM_COMMON.cm_notify_party_insert", "type": "CALLS"}
+{"from": "feat:commercial-buyer-notify-party", "to": "proc:PKG_CM_COMMON.cm_notify_party_select", "type": "CALLS"}
+{"from": "feat:commercial-buyer-notify-party", "to": "proc:PKG_CM_COMMON.cm_notify_party_delete", "type": "CALLS"}
+{"from": "feat:commercial-buyer-notify-party", "to": "tbl:CM_NOTIFY_PARTY", "type": "USES_TABLE"}
+{"from": "feat:commercial-buyer-notify-party", "to": "model:CM_NOTIFY_PARTYModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-buyer-notify-party", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:mrc-buyer", "to": "feat:commercial-buyer-notify-party", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:commercial-cash-incentive", "type": "CONTAINS"}
+{"from": "feat:commercial-cash-incentive", "to": "svc:NONE (no ERP.BLL service for CM_EXP_CIA_DET) — CM_EXP_CIA_DETModel persists itself; see Overview", "type": "USES_SERVICE"}
+{"from": "feat:commercial-cash-incentive", "to": "mvc:CmrController.CashIncentive", "type": "EXPOSES"}
+{"from": "feat:commercial-cash-incentive", "to": "api:GET:api/Commercial/CI/SelectAll/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/Commercial/CI/SelectAll/{pageNo}/{pageSize}", "to": "svc:NONE (no ERP.BLL service for CM_EXP_CIA_DET) — CM_EXP_CIA_DETModel persists itself; see Overview", "type": "INJECTS"}
+{"from": "feat:commercial-cash-incentive", "to": "api:GET:api/Commercial/CI/GetCashIncentive/{pCM_EXP_LC_H_ID}/{pCOMPARE_PCT}", "type": "EXPOSES"}
+{"from": "api:GET:api/Commercial/CI/GetCashIncentive/{pCM_EXP_LC_H_ID}/{pCOMPARE_PCT}", "to": "svc:NONE (no ERP.BLL service for CM_EXP_CIA_DET) — CM_EXP_CIA_DETModel persists itself; see Overview", "type": "INJECTS"}
+{"from": "feat:commercial-cash-incentive", "to": "api:POST:api/Commercial/CI/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/Commercial/CI/Save", "to": "svc:NONE (no ERP.BLL service for CM_EXP_CIA_DET) — CM_EXP_CIA_DETModel persists itself; see Overview", "type": "INJECTS"}
+{"from": "feat:commercial-cash-incentive", "to": "api:POST:api/Commercial/CI/Delete", "type": "EXPOSES"}
+{"from": "api:POST:api/Commercial/CI/Delete", "to": "svc:NONE (no ERP.BLL service for CM_EXP_CIA_DET) — CM_EXP_CIA_DETModel persists itself; see Overview", "type": "INJECTS"}
+{"from": "feat:commercial-cash-incentive", "to": "proc:PKG_CM_EXP_CIA_DET.CM_EXP_CIA_DET_INSERT", "type": "CALLS"}
+{"from": "feat:commercial-cash-incentive", "to": "proc:PKG_CM_EXP_CIA_DET.CM_EXP_CIA_DET_DELETE", "type": "CALLS"}
+{"from": "feat:commercial-cash-incentive", "to": "proc:PKG_CM_EXP_CIA_DET.CM_EXP_CIA_DET_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-cash-incentive", "to": "tbl:CM_EXP_CIA_DET", "type": "USES_TABLE"}
+{"from": "feat:commercial-cash-incentive", "to": "model:CM_EXP_CIA_DETModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-cash-incentive", "to": "model:CashIncentiveDetailModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-cash-incentive", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:commercial-exp-lc-contract", "to": "feat:commercial-cash-incentive", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:commercial-cm-bo-exp-particular", "type": "CONTAINS"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "USES_SERVICE"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "mvc:CmrController.CmBoExpParticular", "type": "EXPOSES"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "api:GET:api/Commercial/CmBoExpParticular/SelectAll/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/Commercial/CmBoExpParticular/SelectAll/{pageNo}/{pageSize}", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "INJECTS"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "api:GET:api/Commercial/CmBoExpParticular/GetBoExpParticularById", "type": "EXPOSES"}
+{"from": "api:GET:api/Commercial/CmBoExpParticular/GetBoExpParticularById", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "INJECTS"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "api:POST:api/Commercial/CmBoExpParticular/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/Commercial/CmBoExpParticular/Save", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "INJECTS"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "api:POST:api/Commercial/CmBoExpParticular/Delete", "type": "EXPOSES"}
+{"from": "api:POST:api/Commercial/CmBoExpParticular/Delete", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "INJECTS"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "proc:PKG_CM_BILL_OF_EXPORT_PARTICULAR.CM_BILL_OF_EXPORT_PARTICULAR_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "proc:PKG_CM_BILL_OF_EXPORT_PARTICULAR.CM_BILL_OF_EXPORT_PARTICULAR_INSERT", "type": "CALLS"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "proc:PKG_CM_BILL_OF_EXPORT_PARTICULAR.CM_BILL_OF_EXPORT_PARTICULAR_DELETE", "type": "CALLS"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "tbl:CM_BILL_OF_EXPORT_PARTICULAR", "type": "USES_TABLE"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "model:CM_BILL_OF_EXPORT_PARTICULARModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-cm-bo-exp-particular", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "mod:commercial", "to": "feat:cm-loc-exchng-rate", "type": "CONTAINS"}
+{"from": "feat:cm-loc-exchng-rate", "to": "svc:ICM_LOC_EXCHNG_RATEService / CM_LOC_EXCHNG_RATEService", "type": "USES_SERVICE"}
+{"from": "feat:cm-loc-exchng-rate", "to": "mvc:CmrController.CmLocalExchngRateManage", "type": "EXPOSES"}
+{"from": "feat:cm-loc-exchng-rate", "to": "api:GET:api/Commercial/CmLocalExchngRate/SelectAll/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/Commercial/CmLocalExchngRate/SelectAll/{pageNo}/{pageSize}", "to": "svc:ICM_LOC_EXCHNG_RATEService / CM_LOC_EXCHNG_RATEService", "type": "INJECTS"}
+{"from": "feat:cm-loc-exchng-rate", "to": "api:GET:api/Commercial/CmLocalExchngRate/GetCM_LOC_EXCHNG_RATEById", "type": "EXPOSES"}
+{"from": "api:GET:api/Commercial/CmLocalExchngRate/GetCM_LOC_EXCHNG_RATEById", "to": "svc:ICM_LOC_EXCHNG_RATEService / CM_LOC_EXCHNG_RATEService", "type": "INJECTS"}
+{"from": "feat:cm-loc-exchng-rate", "to": "api:POST:api/Commercial/CmLocalExchngRate/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/Commercial/CmLocalExchngRate/Save", "to": "svc:ICM_LOC_EXCHNG_RATEService / CM_LOC_EXCHNG_RATEService", "type": "INJECTS"}
+{"from": "feat:cm-loc-exchng-rate", "to": "api:POST:api/Commercial/CmLocalExchngRate/Delete", "type": "EXPOSES"}
+{"from": "api:POST:api/Commercial/CmLocalExchngRate/Delete", "to": "svc:ICM_LOC_EXCHNG_RATEService / CM_LOC_EXCHNG_RATEService", "type": "INJECTS"}
+{"from": "feat:cm-loc-exchng-rate", "to": "proc:PKG_CM_LOC_EXCHNG_RATE.CM_LOC_EXCHNG_RATE_INSERT", "type": "CALLS"}
+{"from": "feat:cm-loc-exchng-rate", "to": "proc:PKG_CM_LOC_EXCHNG_RATE.CM_LOC_EXCHNG_RATE_DELETE", "type": "CALLS"}
+{"from": "feat:cm-loc-exchng-rate", "to": "proc:PKG_CM_LOC_EXCHNG_RATE.CM_LOC_EXCHNG_RATE_SELECT", "type": "CALLS"}
+{"from": "feat:cm-loc-exchng-rate", "to": "tbl:CM_LOC_EXCHNG_RATE", "type": "USES_TABLE"}
+{"from": "feat:cm-loc-exchng-rate", "to": "model:CM_LOC_EXCHNG_RATEModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-loc-exchng-rate", "to": "model:CM_LOC_EXCHNG_RATE_FILTERModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-loc-exchng-rate", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:security-signin", "to": "feat:cm-loc-exchng-rate", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:commercial-cmr-bill-adjustment", "type": "CONTAINS"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService", "type": "USES_SERVICE"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "mvc:CmrController.CmrBillAdjustment", "type": "EXPOSES"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "api:GET:api/cmr/ExportBill/GetBillOfExchangeList/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetBillOfExchangeList/{pageNo}/{pageSize}", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "api:POST:api/cmr/ExportBill/SaveDate", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/SaveDate", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "api:GET:api/cmr/ExportBill/GetBillOfExchangeInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetBillOfExchangeInfo", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "api:POST:api/cmr/ExportBill/SaveBOE", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/SaveBOE", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "api:POST:api/cmr/ExportBill/SaveAdvBOE", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/SaveAdvBOE", "to": "svc:ICM_EXP_BILL_OF_EX_HService / CM_EXP_BILL_OF_EX_HService", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BILL_OF_EX_H_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BILL_OF_EX_H_INSERT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "tbl:CM_EXP_BILL_OF_EX_H", "type": "USES_TABLE"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "model:CM_EXP_BILL_OF_EX_HFilterModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "model:CM_EXP_BILL_OF_EX_H_DATE_Model", "type": "MAPS_ROW"}
+{"from": "feat:commercial-cmr-bill-adjustment", "to": "model:CM_EXP_BILL_OF_EX_HModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-bill-of-exchange", "to": "feat:commercial-cmr-bill-adjustment", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:commercial-cmr-margin-closing", "type": "CONTAINS"}
+{"from": "feat:commercial-cmr-margin-closing", "to": "svc:IPAYMENT_RECEIVE_SERVICE.GetPaymentReceiveClosing / PAYMENT_RECEIVE_SERVICE.GetPaymentReceiveClosing", "type": "USES_SERVICE"}
+{"from": "feat:commercial-cmr-margin-closing", "to": "mvc:CmrController.CmrMarginClosing", "type": "EXPOSES"}
+{"from": "feat:commercial-cmr-margin-closing", "to": "api:GET:api/cmr/PaymentReceive/GetAll", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/PaymentReceive/GetAll", "to": "svc:IPAYMENT_RECEIVE_SERVICE.GetPaymentReceiveClosing / PAYMENT_RECEIVE_SERVICE.GetPaymentReceiveClosing", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-margin-closing", "to": "proc:PKG_CM_TRX_PMT_RCV_D.CM_PMT_RCV_CLOSING_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-margin-closing", "to": "tbl:CM_PMT_RCV_CLOSING", "type": "USES_TABLE"}
+{"from": "feat:commercial-cmr-margin-closing", "to": "tbl:RF_BANK", "type": "USES_TABLE"}
+{"from": "feat:commercial-cmr-margin-closing", "to": "tbl:LOOKUP_DATA", "type": "USES_TABLE"}
+{"from": "feat:commercial-cmr-margin-closing", "to": "model:PAYMENT_RECEIVE_MODEL", "type": "MAPS_ROW"}
+{"from": "mod:commercial", "to": "feat:commercial-cmr-payment-receive", "type": "CONTAINS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "svc:IPAYMENT_RECEIVE_SERVICE / PAYMENT_RECEIVE_SERVICE", "type": "USES_SERVICE"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "mvc:CmrController.CmrPaymentReceive", "type": "EXPOSES"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "api:GET:api/cmr/ExportBill/GetPaymentRcvExpBillOfExchangeByFilter/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetPaymentRcvExpBillOfExchangeByFilter/{pageNo}/{pageSize}", "to": "svc:IPAYMENT_RECEIVE_SERVICE / PAYMENT_RECEIVE_SERVICE", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "api:GET:api/cmr/PaymentReceive/GetCmExpBillOfExRcv", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/PaymentReceive/GetCmExpBillOfExRcv", "to": "svc:IPAYMENT_RECEIVE_SERVICE / PAYMENT_RECEIVE_SERVICE", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "api:GET:api/cmr/PaymentReceive/GetPmtRcvFormData", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/PaymentReceive/GetPmtRcvFormData", "to": "svc:IPAYMENT_RECEIVE_SERVICE / PAYMENT_RECEIVE_SERVICE", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "api:POST:api/cmr/PaymentReceive/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/PaymentReceive/Save", "to": "svc:IPAYMENT_RECEIVE_SERVICE / PAYMENT_RECEIVE_SERVICE", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "api:POST:api/cmr/PaymentReceive/Delete", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/PaymentReceive/Delete", "to": "svc:IPAYMENT_RECEIVE_SERVICE / PAYMENT_RECEIVE_SERVICE", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "proc:PKG_CM_TRX_PMT_RCV_D.CM_EXP_BILL_OF_EX_RCV_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "proc:PKG_CM_TRX_PMT_RCV_D.CM_EXP_BILL_OF_EX_RCV_INSERT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "proc:PKG_CM_TRX_PMT_RCV_D.CM_EXP_BILL_OF_EX_RCV_DELETE", "type": "CALLS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "proc:PKG_CM_TRX_PMT_RCV_D.FN_UPDATE_NEGOTIATED_ORDER_INFO", "type": "CALLS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_BILL_OF_EX_H_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "tbl:CM_EXP_BILL_OF_EX_RCV", "type": "USES_TABLE"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "tbl:CM_EXP_BILL_OF_EX_H", "type": "USES_TABLE"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "tbl:CM_EXP_COM_INV_PO", "type": "USES_TABLE"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "tbl:CM_EXP_LC_D_PO", "type": "USES_TABLE"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "model:CM_EXP_BILL_OF_EX_RCV_MODEL", "type": "MAPS_ROW"}
+{"from": "feat:commercial-cmr-payment-receive", "to": "model:PAYMENT_RECEIVE_MODEL", "type": "MAPS_ROW"}
+{"from": "feat:cm-bill-of-exchange", "to": "feat:commercial-cmr-payment-receive", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:commercial-cmr-reports", "type": "CONTAINS"}
+{"from": "feat:commercial-cmr-reports", "to": "svc:ICmrReportModelService / CmrReportModelService (report data); IRF_REPORTService / RF_REPORTService (report list, shared cross-module)", "type": "USES_SERVICE"}
+{"from": "feat:commercial-cmr-reports", "to": "mvc:CmrController.CmrReport", "type": "EXPOSES"}
+{"from": "feat:commercial-cmr-reports", "to": "api:GET:api/common/getReportDataListByUser/12", "type": "EXPOSES"}
+{"from": "api:GET:api/common/getReportDataListByUser/12", "to": "svc:ICmrReportModelService / CmrReportModelService (report data); IRF_REPORTService / RF_REPORTService (report list, shared cross-module)", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-reports", "to": "api:POST:api/Cmr/CmrReport/PreviewReport", "type": "EXPOSES"}
+{"from": "api:POST:api/Cmr/CmrReport/PreviewReport", "to": "svc:ICmrReportModelService / CmrReportModelService (report data); IRF_REPORTService / RF_REPORTService (report list, shared cross-module)", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-reports", "to": "api:POST:api/Cmr/CmrReport/PreviewReportRDLC", "type": "EXPOSES"}
+{"from": "api:POST:api/Cmr/CmrReport/PreviewReportRDLC", "to": "svc:ICmrReportModelService / CmrReportModelService (report data); IRF_REPORTService / RF_REPORTService (report list, shared cross-module)", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-reports", "to": "api:GET:api/Cmr/CmrReport/GetFundLoanConfigData", "type": "EXPOSES"}
+{"from": "api:GET:api/Cmr/CmrReport/GetFundLoanConfigData", "to": "svc:ICmrReportModelService / CmrReportModelService (report data); IRF_REPORTService / RF_REPORTService (report list, shared cross-module)", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-reports", "to": "api:POST:api/Cmr/CmrReport/FundLoanConfigSave", "type": "EXPOSES"}
+{"from": "api:POST:api/Cmr/CmrReport/FundLoanConfigSave", "to": "svc:ICmrReportModelService / CmrReportModelService (report data); IRF_REPORTService / RF_REPORTService (report list, shared cross-module)", "type": "INJECTS"}
+{"from": "feat:commercial-cmr-reports", "to": "proc:PKG_CM_REPORT.CM_REPORT_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-reports", "to": "proc:PKG_CM_EXP_CIA_DET.CM_EXP_CIA_DET_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-reports", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_LC_H_REPORT_BY_FILTER", "type": "CALLS"}
+{"from": "feat:commercial-cmr-reports", "to": "proc:pkg_security.rf_report_select", "type": "CALLS"}
+{"from": "feat:commercial-cmr-reports", "to": "proc:PKG_CM_REPORT.CM_FUND_LOAN_CONFIG_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-reports", "to": "proc:PKG_CM_REPORT.CM_FUND_LOAN_CONFIG_INSERT", "type": "CALLS"}
+{"from": "feat:commercial-cmr-reports", "to": "model:CmrReportModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-cmr-reports", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:commercial-cmr-reports", "to": "sess:multiUserType", "type": "REQUIRES"}
+{"from": "feat:mrc-buyer", "to": "feat:commercial-cmr-reports", "type": "UPSTREAM"}
+{"from": "feat:commercial-exp-lc-contract", "to": "feat:commercial-cmr-reports", "type": "UPSTREAM"}
+{"from": "feat:commercial-cash-incentive", "to": "feat:commercial-cmr-reports", "type": "UPSTREAM"}
+{"from": "feat:commercial-buyer-notify-party", "to": "feat:commercial-cmr-reports", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:cm-exp-boe-forwading-dist", "type": "CONTAINS"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "USES_SERVICE"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "mvc:CmrController.ExpBoEForwadingDist", "type": "EXPOSES"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "api:GET:api/Commercial/CmExpBoEForwadingDist/ExpBoEFrdDistSelectAll/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/Commercial/CmExpBoEForwadingDist/ExpBoEFrdDistSelectAll/{pageNo}/{pageSize}", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "INJECTS"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "api:GET:api/Commercial/CmExpBoEForwadingDist/GetExpBoEFrdDistById", "type": "EXPOSES"}
+{"from": "api:GET:api/Commercial/CmExpBoEForwadingDist/GetExpBoEFrdDistById", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "INJECTS"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "api:POST:api/Commercial/CmExpBoEForwadingDist/CmExpBoEForwadingDistSave", "type": "EXPOSES"}
+{"from": "api:POST:api/Commercial/CmExpBoEForwadingDist/CmExpBoEForwadingDistSave", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "INJECTS"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "api:POST:api/Commercial/CmExpBoEForwadingDist/CmExpBoEForwadingDistDelete", "type": "EXPOSES"}
+{"from": "api:POST:api/Commercial/CmExpBoEForwadingDist/CmExpBoEForwadingDistDelete", "to": "svc:ICmBoExpParticularService / CmBoExpParticularService", "type": "INJECTS"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "proc:PKG_CM_EXP_BILL_FORD_DIST.CM_EXP_BILL_FORD_DIST_INSERT", "type": "CALLS"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "proc:PKG_CM_EXP_BILL_FORD_DIST.CM_EXP_BILL_FORD_DIST_DELETE", "type": "CALLS"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "proc:PKG_CM_EXP_BILL_FORD_DIST.CM_EXP_BILL_FORD_DIST_SELECT", "type": "CALLS"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "tbl:CM_EXP_BILL_FORD_DIST", "type": "USES_TABLE"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "model:CM_BILL_OF_EXPORT_ForwadingDistModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-exp-boe-forwading-dist", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:security-signin", "to": "feat:cm-exp-boe-forwading-dist", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:cmr-exp-invoice", "type": "CONTAINS"}
+{"from": "feat:cmr-exp-invoice", "to": "svc:ICM_EXP_COM_INV_HService / CM_EXP_COM_INV_HService", "type": "USES_SERVICE"}
+{"from": "feat:cmr-exp-invoice", "to": "mvc:CmrController.ExpInvoiceList", "type": "EXPOSES"}
+{"from": "feat:cmr-exp-invoice", "to": "api:GET:api/cmr/ExportBill/GetExpComInvoiceList/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetExpComInvoiceList/{pageNo}/{pageSize}", "to": "svc:ICM_EXP_COM_INV_HService / CM_EXP_COM_INV_HService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-invoice", "to": "api:GET:api/cmr/ExportBill/GetExpComInvoiceInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetExpComInvoiceInfo", "to": "svc:ICM_EXP_COM_INV_HService / CM_EXP_COM_INV_HService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-invoice", "to": "api:GET:api/cmr/ExportBill/GetExpComInvoiceForBoE", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetExpComInvoiceForBoE", "to": "svc:ICM_EXP_COM_INV_HService / CM_EXP_COM_INV_HService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-invoice", "to": "api:GET:api/cmr/ExportBill/GetOrderWiseSize", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportBill/GetOrderWiseSize", "to": "svc:ICM_EXP_COM_INV_HService / CM_EXP_COM_INV_HService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-invoice", "to": "api:POST:api/cmr/ExportBill/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/Save", "to": "svc:ICM_EXP_COM_INV_HService / CM_EXP_COM_INV_HService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-invoice", "to": "api:POST:api/cmr/ExportBill/BLDetailsUpdate", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportBill/BLDetailsUpdate", "to": "svc:ICM_EXP_COM_INV_HService / CM_EXP_COM_INV_HService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-invoice", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_COM_INV_H_INSERT", "type": "CALLS"}
+{"from": "feat:cmr-exp-invoice", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_COM_INV_H_UPDATE", "type": "CALLS"}
+{"from": "feat:cmr-exp-invoice", "to": "proc:PKG_CM_EXPORT_BILL.CM_EXP_COM_INV_H_SELECT", "type": "CALLS"}
+{"from": "feat:cmr-exp-invoice", "to": "tbl:CM_EXP_COM_INV_H", "type": "USES_TABLE"}
+{"from": "feat:cmr-exp-invoice", "to": "tbl:CM_EXP_COM_INV_PO", "type": "USES_TABLE"}
+{"from": "feat:cmr-exp-invoice", "to": "tbl:CM_EXP_COM_INV_COL_SIZE_PO", "type": "USES_TABLE"}
+{"from": "feat:cmr-exp-invoice", "to": "tbl:CM_EXP_COM_INV_H_STS", "type": "USES_TABLE"}
+{"from": "feat:cmr-exp-invoice", "to": "tbl:CM_EXP_COM_INV_H_HIST", "type": "USES_TABLE"}
+{"from": "feat:cmr-exp-invoice", "to": "model:CM_EXP_COM_INV_HModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-exp-invoice", "to": "model:CM_EXP_COM_INVFilter", "type": "MAPS_ROW"}
+{"from": "feat:cmr-exp-invoice", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:commercial-exp-lc-contract", "to": "feat:cmr-exp-invoice", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:commercial-exp-lc-contract", "type": "CONTAINS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "USES_SERVICE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "mvc:CmrController.ExpLcContractList", "type": "EXPOSES"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/SelectAll/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/SelectAll/{pageNo}/{pageSize}", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/EXPLCWiseB2BSummary", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/EXPLCWiseB2BSummary", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/EXPLCWiseCommodityType", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/EXPLCWiseCommodityType", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:POST:api/cmr/ExportLCSalesContact/SaveCommodityBBLC", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportLCSalesContact/SaveCommodityBBLC", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/CM_EXP_LC_REVISE_REQ_GET_BY_LCID", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/CM_EXP_LC_REVISE_REQ_GET_BY_LCID", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetExportLCOrSCByFilter", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetExportLCOrSCByFilter", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetExportLcContactInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetExportLcContactInfo", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetLcValueById", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetLcValueById", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetExportLcByBuyerID", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetExportLcByBuyerID", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetLcApplicantByBuyerID", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetLcApplicantByBuyerID", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetLcApplicantByBuyerDD", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetLcApplicantByBuyerDD", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetOrderDtlInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetOrderDtlInfo", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetOrderDtlComInv", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetOrderDtlComInv", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetPOListByID", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetPOListByID", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:POST:api/cmr/ExportLCSalesContact/SaveLcApp", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportLCSalesContact/SaveLcApp", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:POST:api/cmr/ExportLCSalesContact/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportLCSalesContact/Save", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:POST:api/cmr/ExportLCSalesContact/Update", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportLCSalesContact/Update", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:POST:api/cmr/ExportLCSalesContact/ExpLCApplyToApproveRevise", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportLCSalesContact/ExpLCApplyToApproveRevise", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:POST:api/cmr/ExportLCSalesContact/CIANotifyDateSync", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportLCSalesContact/CIANotifyDateSync", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:POST:api/cmr/ExportLCSalesContact/DeleteExpLcReviseDocuent", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportLCSalesContact/DeleteExpLcReviseDocuent", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLC/GetExportPIListByFilter", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLC/GetExportPIListByFilter", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetPaginatedOrderNoDropdown", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetPaginatedOrderNoDropdown", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "api:GET:api/cmr/ExportLCSalesContact/GetOrderDtlForLC", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCSalesContact/GetOrderDtlForLC", "to": "svc:ICM_EXP_LC_HService / CM_EXP_LC_HService, ICM_EXP_LC_D_POService, ICM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "proc:PKG_CM_EXPORT_LC.CM_EXP_LC_H_INSERT", "type": "CALLS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "proc:PKG_CM_EXPORT_LC.CM_EXP_LC_H_REVISE", "type": "CALLS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "proc:PKG_CM_EXPORT_LC.CM_EXP_LC_H_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_H", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_D_PO", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_D_NTFP", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_INCO_TERM_DELV", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_SHIPMODE_PORT", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_MRG_REP_MAP", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_H_STS", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_H_HST", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_D_PO_HST", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "tbl:CM_EXP_LC_D_NTFP_HST", "type": "USES_TABLE"}
+{"from": "feat:commercial-exp-lc-contract", "to": "model:CM_EXP_LC_HModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-exp-lc-contract", "to": "model:CM_EXP_LC_D_POModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-exp-lc-contract", "to": "model:CM_LC_APPLICANTModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-exp-lc-contract", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:mrc-buyer", "to": "feat:commercial-exp-lc-contract", "type": "UPSTREAM"}
+{"from": "feat:cmr-lc-applicant", "to": "feat:commercial-exp-lc-contract", "type": "UPSTREAM"}
+{"from": "feat:commercial-buyer-notify-party", "to": "feat:commercial-exp-lc-contract", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:cmr-exp-lc-pi", "type": "CONTAINS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "USES_SERVICE"}
+{"from": "feat:cmr-exp-lc-pi", "to": "mvc:CmrController.ExpLcPIList", "type": "EXPOSES"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/SelectAll/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/SelectAll/{pageNo}/{pageSize}", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/GetExportLcPIInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/GetExportLcPIInfo", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/GetExportLcPIDropdown", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/GetExportLcPIDropdown", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/GetExportLcPIDropdownList", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/GetExportLcPIDropdownList", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/GetExportLcPODropdownList", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/GetExportLcPODropdownList", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/GetOrderDtlInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/GetOrderDtlInfo", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/GetPOListByID", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/GetPOListByID", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:POST:api/cmr/ExportLCPI/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportLCPI/Save", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:POST:api/cmr/ExportLCPI/Update", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ExportLCPI/Update", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/GetExportPIForInvoice", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/GetExportPIForInvoice", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/GetExportPOForInvoice", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/GetExportPOForInvoice", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "api:GET:api/cmr/ExportLCPI/GetAdjustedAmount", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ExportLCPI/GetAdjustedAmount", "to": "svc:CM_EXP_PI_HService, CM_EXP_PI_D_POService, CM_EXP_LC_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "proc:PKG_CM_EXPORT_PI.cm_exp_pi_h_insert", "type": "CALLS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "proc:PKG_CM_EXPORT_PI.cm_exp_pi_h_revise", "type": "CALLS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "proc:PKG_CM_EXPORT_PI.CM_EXP_PI_H_SELECT", "type": "CALLS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "proc:PKG_CM_EXPORT_PI.cm_exp_pi_d_po_select", "type": "CALLS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "proc:PKG_CM_EXPORT_LC.CM_EXP_MC_ORDER_H_SELECT", "type": "CALLS"}
+{"from": "feat:cmr-exp-lc-pi", "to": "tbl:CM_EXP_PI_H", "type": "USES_TABLE"}
+{"from": "feat:cmr-exp-lc-pi", "to": "tbl:CM_EXP_PI_D_PO", "type": "USES_TABLE"}
+{"from": "feat:cmr-exp-lc-pi", "to": "tbl:CM_EXP_LC_D_PO", "type": "USES_TABLE"}
+{"from": "feat:cmr-exp-lc-pi", "to": "model:CM_EXP_PI_HModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-exp-lc-pi", "to": "model:CM_EXP_PI_D_POModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-exp-lc-pi", "to": "model:CM_EXP_LC_D_POModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-exp-lc-pi", "to": "model:ADVANCE_Pl_FOR_DROPDOWN", "type": "MAPS_ROW"}
+{"from": "feat:cmr-exp-lc-pi", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "mod:commercial", "to": "feat:cmr-imp-lc-pi", "type": "CONTAINS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "USES_SERVICE"}
+{"from": "feat:cmr-imp-lc-pi", "to": "mvc:CmrController.ImpLcPIList", "type": "EXPOSES"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/SelectAll/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/SelectAll/{pageNo}/{pageSize}", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetImportPIListByFilter", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetImportPIListByFilter", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetPOBySupplier", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetPOBySupplier", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:POST:api/cmr/ImportLCPI/GetPOBySupplierWithFilter", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportLCPI/GetPOBySupplierWithFilter", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetImportLCPIInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetImportLCPIInfo", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetImportLCPIInfoBySupplierID", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetImportLCPIInfoBySupplierID", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetPIDtlInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetPIDtlInfo", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetPIImpDetailsByPIHId", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetPIImpDetailsByPIHId", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetPIDocDtlInfo", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetPIDocDtlInfo", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetPOListByID", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetPOListByID", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetPaginatedLCDropdown", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetPaginatedLCDropdown", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:POST:api/cmr/ImportLCPI/Save", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportLCPI/Save", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:POST:api/cmr/ImportLCPI/Update", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportLCPI/Update", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:POST:api/cmr/ImportLCPI/RevisePO", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportLCPI/RevisePO", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:POST:api/cmr/ImportLCPI/Delete", "type": "EXPOSES"}
+{"from": "api:POST:api/cmr/ImportLCPI/Delete", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "api:GET:api/cmr/ImportLCPI/GetWODetailListForImpPIByWOHID", "type": "EXPOSES"}
+{"from": "api:GET:api/cmr/ImportLCPI/GetWODetailListForImpPIByWOHID", "to": "svc:CM_IMP_PI_HService, CM_IMP_PI_D_YRNService, CM_IMP_PI_DOCService, CM_IMP_PO_HService, CM_EXP_PI_D_POService", "type": "INJECTS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "proc:PKG_CM_IMPORT_PI.cm_imp_pi_h_insert", "type": "CALLS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "proc:PKG_CM_IMPORT_PI.cm_imp_pi_h_update", "type": "CALLS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "proc:PKG_CM_IMPORT_PI.cm_imp_pi_h_revise", "type": "CALLS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "proc:PKG_CM_IMPORT_PI.CM_IMP_PI_H_SELECT", "type": "CALLS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "proc:PKG_CM_IMPORT_PI.CM_IMP_PI_D_select", "type": "CALLS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "proc:PKG_CM_IMPORT_PI.cm_imp_pi_doc_select", "type": "CALLS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "proc:PKG_CM_IMPORT_PI.IMPORT_LC_PI_DELETE", "type": "CALLS"}
+{"from": "feat:cmr-imp-lc-pi", "to": "tbl:CM_IMP_PI_H", "type": "USES_TABLE"}
+{"from": "feat:cmr-imp-lc-pi", "to": "tbl:CM_IMP_PI_D", "type": "USES_TABLE"}
+{"from": "feat:cmr-imp-lc-pi", "to": "tbl:CM_IMP_PI_DOC", "type": "USES_TABLE"}
+{"from": "feat:cmr-imp-lc-pi", "to": "tbl:CM_IMP_PI_H_STS", "type": "USES_TABLE"}
+{"from": "feat:cmr-imp-lc-pi", "to": "tbl:CM_IMP_PI_H_HIST", "type": "USES_TABLE"}
+{"from": "feat:cmr-imp-lc-pi", "to": "tbl:CM_IMP_PI_D_HIST", "type": "USES_TABLE"}
+{"from": "feat:cmr-imp-lc-pi", "to": "tbl:CM_IMP_LC_PI", "type": "USES_TABLE"}
+{"from": "feat:cmr-imp-lc-pi", "to": "model:CM_IMP_PI_HModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-imp-lc-pi", "to": "model:CM_IMP_PI_D_YRNModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-imp-lc-pi", "to": "model:CM_IMP_PI_DOCModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-imp-lc-pi", "to": "model:CM_IMP_PI_H_Delete_MODEL", "type": "MAPS_ROW"}
+{"from": "feat:cmr-imp-lc-pi", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "mod:commercial", "to": "feat:commercial-imp-lc", "type": "CONTAINS"}
+{"from": "feat:commercial-imp-lc", "to": "svc:ICM_IMP_LC_HService / CM_IMP_LC_HService", "type": "USES_SERVICE"}
+{"from": "feat:commercial-imp-lc", "to": "mvc:CmrController.ImpLc", "type": "EXPOSES"}
+{"from": "feat:commercial-imp-lc", "to": "api:GET:ImportLC/SelectAll/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:ImportLC/SelectAll/{pageNo}/{pageSize}", "to": "svc:ICM_IMP_LC_HService / CM_IMP_LC_HService", "type": "INJECTS"}
+{"from": "feat:commercial-imp-lc", "to": "api:GET:ImportLC/GetImportLc", "type": "EXPOSES"}
+{"from": "api:GET:ImportLC/GetImportLc", "to": "svc:ICM_IMP_LC_HService / CM_IMP_LC_HService", "type": "INJECTS"}
+{"from": "feat:commercial-imp-lc", "to": "api:GET:ImportLC/GetImportLcByFilter/{pageNo}/{pageSize}/{pOption}", "type": "EXPOSES"}
+{"from": "api:GET:ImportLC/GetImportLcByFilter/{pageNo}/{pageSize}/{pOption}", "to": "svc:ICM_IMP_LC_HService / CM_IMP_LC_HService", "type": "INJECTS"}
+{"from": "feat:commercial-imp-lc", "to": "api:POST:ImportLC/Save", "type": "EXPOSES"}
+{"from": "api:POST:ImportLC/Save", "to": "svc:ICM_IMP_LC_HService / CM_IMP_LC_HService", "type": "INJECTS"}
+{"from": "feat:commercial-imp-lc", "to": "api:POST:ImportLC/Update", "type": "EXPOSES"}
+{"from": "api:POST:ImportLC/Update", "to": "svc:ICM_IMP_LC_HService / CM_IMP_LC_HService", "type": "INJECTS"}
+{"from": "feat:commercial-imp-lc", "to": "api:POST:ImportLC/Delete", "type": "EXPOSES"}
+{"from": "api:POST:ImportLC/Delete", "to": "svc:ICM_IMP_LC_HService / CM_IMP_LC_HService", "type": "INJECTS"}
+{"from": "feat:commercial-imp-lc", "to": "proc:PKG_CM_IMPORT_LC.CM_IMP_LC_H_INSERT", "type": "CALLS"}
+{"from": "feat:commercial-imp-lc", "to": "proc:PKG_CM_IMPORT_LC.CM_IMP_LC_H_REVISE", "type": "CALLS"}
+{"from": "feat:commercial-imp-lc", "to": "proc:PKG_CM_IMPORT_LC.CM_IMP_LC_H_SELECT", "type": "CALLS"}
+{"from": "feat:commercial-imp-lc", "to": "proc:PKG_CM_IMPORT_LC.CM_IMP_LC_H_DELETE", "type": "CALLS"}
+{"from": "feat:commercial-imp-lc", "to": "tbl:CM_IMP_LC_H", "type": "USES_TABLE"}
+{"from": "feat:commercial-imp-lc", "to": "tbl:CM_IMP_LC_D", "type": "USES_TABLE"}
+{"from": "feat:commercial-imp-lc", "to": "tbl:CM_IMP_LC_PI", "type": "USES_TABLE"}
+{"from": "feat:commercial-imp-lc", "to": "tbl:CM_IMP_LC_CMD", "type": "USES_TABLE"}
+{"from": "feat:commercial-imp-lc", "to": "tbl:CM_IMP_LC_H_X_COM_TYPE", "type": "USES_TABLE"}
+{"from": "feat:commercial-imp-lc", "to": "tbl:CM_IMP_LC_INCO_TERM_DELV", "type": "USES_TABLE"}
+{"from": "feat:commercial-imp-lc", "to": "tbl:CM_IMP_LC_SHIPMODE_PORT", "type": "USES_TABLE"}
+{"from": "feat:commercial-imp-lc", "to": "tbl:CM_IMP_LC_H_STS", "type": "USES_TABLE"}
+{"from": "feat:commercial-imp-lc", "to": "tbl:CM_IMP_EXP_LC_MAP", "type": "USES_TABLE"}
+{"from": "feat:commercial-imp-lc", "to": "model:CM_IMP_LC_HModel", "type": "MAPS_ROW"}
+{"from": "feat:commercial-imp-lc", "to": "model:CM_IMP_LC_HSearchFilter", "type": "MAPS_ROW"}
+{"from": "feat:commercial-imp-lc", "to": "model:CM_IMP_LC_H_Delete_Model", "type": "MAPS_ROW"}
+{"from": "feat:commercial-imp-lc", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:commercial-exp-lc-contract", "to": "feat:commercial-imp-lc", "type": "UPSTREAM"}
+{"from": "feat:cmr-imp-lc-pi", "to": "feat:commercial-imp-lc", "type": "UPSTREAM"}
+{"from": "feat:mrc-buyer", "to": "feat:commercial-imp-lc", "type": "UPSTREAM"}
+{"from": "feat:commercial-imp-lc", "to": "feat:cm-acpt-of-import-bill", "type": "DOWNSTREAM"}
+{"from": "feat:commercial-imp-lc", "to": "feat:commercial-bill-of-entry", "type": "DOWNSTREAM"}
+{"from": "mod:commercial", "to": "feat:cmr-lc-applicant", "type": "CONTAINS"}
+{"from": "feat:cmr-lc-applicant", "to": "svc:ICM_LC_APPLICANTService / CM_LC_APPLICANTService", "type": "USES_SERVICE"}
+{"from": "feat:cmr-lc-applicant", "to": "mvc:CmrController.LcApplicant", "type": "EXPOSES"}
+{"from": "feat:cmr-lc-applicant", "to": "api:GET:BuyerApplicant/GetBuyerApplicantInfo", "type": "EXPOSES"}
+{"from": "api:GET:BuyerApplicant/GetBuyerApplicantInfo", "to": "svc:ICM_LC_APPLICANTService / CM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-applicant", "to": "api:POST:BuyerApplicant/Save", "type": "EXPOSES"}
+{"from": "api:POST:BuyerApplicant/Save", "to": "svc:ICM_LC_APPLICANTService / CM_LC_APPLICANTService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-applicant", "to": "proc:PKG_CM_EXPORT_LC.cm_lc_applicant_insert", "type": "CALLS"}
+{"from": "feat:cmr-lc-applicant", "to": "proc:PKG_CM_EXPORT_LC.cm_lc_applicant_delete", "type": "CALLS"}
+{"from": "feat:cmr-lc-applicant", "to": "proc:PKG_CM_EXPORT_LC.cm_lc_applicant_select", "type": "CALLS"}
+{"from": "feat:cmr-lc-applicant", "to": "tbl:CM_LC_APPLICANT", "type": "USES_TABLE"}
+{"from": "feat:cmr-lc-applicant", "to": "model:CM_LC_APPLICANTModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-lc-applicant", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:mrc-buyer", "to": "feat:cmr-lc-applicant", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:cmr-lc-ud", "type": "CONTAINS"}
+{"from": "feat:cmr-lc-ud", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "USES_SERVICE"}
+{"from": "feat:cmr-lc-ud", "to": "mvc:CmrController.LcUD", "type": "EXPOSES"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetAllUDInfo/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetAllUDInfo/{pageNo}/{pageSize}", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetUDInfo", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetUDInfo", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetNewUDAmentmentInfo", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetNewUDAmentmentInfo", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetUDDetailsInfo", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetUDDetailsInfo", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetUDAmendmentDataInfo", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetUDAmendmentDataInfo", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetExpUDInfo", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetExpUDInfo", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetImpUDInfo", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetImpUDInfo", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetUDAuto", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetUDAuto", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:POST:LcUD/Save", "type": "EXPOSES"}
+{"from": "api:POST:LcUD/Save", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:POST:LcUD/SaveAmendment", "type": "EXPOSES"}
+{"from": "api:POST:LcUD/SaveAmendment", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:POST:LcUD/Update", "type": "EXPOSES"}
+{"from": "api:POST:LcUD/Update", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetPaginatedExportLC", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetPaginatedExportLC", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:GET:LcUD/GetUDParentChildDetails", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetUDParentChildDetails", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "api:POST:LcUD/Delete", "type": "EXPOSES"}
+{"from": "api:POST:LcUD/Delete", "to": "svc:ICM_UD_HService / CM_UD_HService, ICM_UD_DService / CM_UD_DService", "type": "INJECTS"}
+{"from": "feat:cmr-lc-ud", "to": "proc:PKG_CM_UD.CM_UD_H_INSERT", "type": "CALLS"}
+{"from": "feat:cmr-lc-ud", "to": "proc:PKG_CM_UD.CM_UD_H_SELECT", "type": "CALLS"}
+{"from": "feat:cmr-lc-ud", "to": "proc:PKG_CM_UD.CM_UD_H_DELETE", "type": "CALLS"}
+{"from": "feat:cmr-lc-ud", "to": "proc:PKG_CM_UD.CM_UD_D_Select", "type": "CALLS"}
+{"from": "feat:cmr-lc-ud", "to": "tbl:CM_UD_H", "type": "USES_TABLE"}
+{"from": "feat:cmr-lc-ud", "to": "tbl:CM_UD_D", "type": "USES_TABLE"}
+{"from": "feat:cmr-lc-ud", "to": "model:CM_UD_HModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-lc-ud", "to": "model:CM_UD_DModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-lc-ud", "to": "model:DeleteUDDto", "type": "MAPS_ROW"}
+{"from": "feat:cmr-lc-ud", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "mod:commercial", "to": "feat:cmr-reference-type", "type": "CONTAINS"}
+{"from": "feat:cmr-reference-type", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "USES_SERVICE"}
+{"from": "feat:cmr-reference-type", "to": "mvc:CmrController.ReferenceType", "type": "EXPOSES"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetPayTerm", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetPayTerm", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/SavePT", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/SavePT", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/DeletePT", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/DeletePT", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetIncoTerm", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetIncoTerm", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/SaveIT", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/SaveIT", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/DeleteIT", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/DeleteIT", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetDeliveryPlace", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetDeliveryPlace", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetDeliveryPlaceDD", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetDeliveryPlaceDD", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/SaveDP", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/SaveDP", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/DeleteDP", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/DeleteDP", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetTransitPort", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetTransitPort", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetTransitPortDropdown", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetTransitPortDropdown", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetPaginatedTransitPortDropdown", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetPaginatedTransitPortDropdown", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/SaveTP", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/SaveTP", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/DeleteTP", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/DeleteTP", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetLCType", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetLCType", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetLC_COMODITY_TYPe", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetLC_COMODITY_TYPe", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/SaveLT", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/SaveLT", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/DeleteLT", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/DeleteLT", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetShipMode", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetShipMode", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/CntrSizeListDD", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/CntrSizeListDD", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/SaveSM", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/SaveSM", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/DeleteSM", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/DeleteSM", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetGmtAsn", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetGmtAsn", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/SaveGA", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/SaveGA", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/DeleteGA", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/DeleteGA", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/SaveForwarder", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/SaveForwarder", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:GET:ReferenceTyp/GetForwarder", "type": "EXPOSES"}
+{"from": "api:GET:ReferenceTyp/GetForwarder", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "api:POST:ReferenceTyp/DeleteForwarder", "type": "EXPOSES"}
+{"from": "api:POST:ReferenceTyp/DeleteForwarder", "to": "svc:RF_PAYM_TERMService, RF_INCO_TERMService, RF_DELV_PLCService, RF_TRAN_PORTService, RF_LC_TYPEService, RF_LC_COMODITY_TYPEService, RF_SHIP_MODEService, RF_GMT_ASNService, RF_FRT_FORWRDRService, RF_CONTAINER_SIZE_Service", "type": "INJECTS"}
+{"from": "feat:cmr-reference-type", "to": "proc:PKG_CM_REF_TYPE.rf_paym_term_select", "type": "CALLS"}
+{"from": "feat:cmr-reference-type", "to": "proc:PKG_CM_REF_TYPE.rf_inco_term_select", "type": "CALLS"}
+{"from": "feat:cmr-reference-type", "to": "proc:PKG_CM_REF_TYPE.rf_delv_plc_select", "type": "CALLS"}
+{"from": "feat:cmr-reference-type", "to": "proc:PKG_CM_REF_TYPE.rf_tran_port_select", "type": "CALLS"}
+{"from": "feat:cmr-reference-type", "to": "proc:PKG_CM_REF_TYPE.rf_lc_type_select", "type": "CALLS"}
+{"from": "feat:cmr-reference-type", "to": "proc:PKG_CM_REF_TYPE.rf_ship_mode_select", "type": "CALLS"}
+{"from": "feat:cmr-reference-type", "to": "proc:PKG_CM_REF_TYPE.rf_gmt_asn_select", "type": "CALLS"}
+{"from": "feat:cmr-reference-type", "to": "proc:PKG_CM_REF_TYPE.rf_custom_off_select", "type": "CALLS"}
+{"from": "feat:cmr-reference-type", "to": "proc:PKG_RF_FRT_FORWRDR.rf_forwarder_select", "type": "CALLS"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_PAYM_TERM", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_INCO_TERM", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_DELV_PLC", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_TRAN_PORT", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_LC_TYPE", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_LC_COMODITY_TYPE", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_SHIP_MODE", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_GMT_ASN", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_FRT_FORWRDR", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "tbl:RF_CONTAINER_SIZE", "type": "USES_TABLE"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_PAYM_TERMModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_INCO_TERMModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_DELV_PLCModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_TRAN_PORTModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_LC_TYPEModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_LC_COMODITY_TYPEModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_SHIP_MODEModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_GMT_ASNModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_FRT_FORWRDRModel", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "model:RF_FRT_FORWRDR_DELETE_Model", "type": "MAPS_ROW"}
+{"from": "feat:cmr-reference-type", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "mod:commercial", "to": "feat:cm-rf-bank-list", "type": "CONTAINS"}
+{"from": "feat:cm-rf-bank-list", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "USES_SERVICE"}
+{"from": "feat:cm-rf-bank-list", "to": "mvc:CmrController.RfBank", "type": "EXPOSES"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:BankDataList", "type": "EXPOSES"}
+{"from": "api:GET:BankDataList", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:BankDataDD", "type": "EXPOSES"}
+{"from": "api:GET:BankDataDD", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:BankAccTypeDataDD", "type": "EXPOSES"}
+{"from": "api:GET:BankAccTypeDataDD", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:POST:BankSave", "type": "EXPOSES"}
+{"from": "api:POST:BankSave", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:POST:BankAccountSave", "type": "EXPOSES"}
+{"from": "api:POST:BankAccountSave", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:GetBankBranchList", "type": "EXPOSES"}
+{"from": "api:GET:GetBankBranchList", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:GetBankBranchListDropdown", "type": "EXPOSES"}
+{"from": "api:GET:GetBankBranchListDropdown", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:GetPaginatedBankBranchListDropdown", "type": "EXPOSES"}
+{"from": "api:GET:GetPaginatedBankBranchListDropdown", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:GetPaginatedBankListDropdown", "type": "EXPOSES"}
+{"from": "api:GET:GetPaginatedBankListDropdown", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:BankBranchAccList", "type": "EXPOSES"}
+{"from": "api:GET:BankBranchAccList", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:BankBranchDataList/{pRF_BANK_ID}", "type": "EXPOSES"}
+{"from": "api:GET:BankBranchDataList/{pRF_BANK_ID}", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:POST:BankBranchSave", "type": "EXPOSES"}
+{"from": "api:POST:BankBranchSave", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:BankAccountAutoList", "type": "EXPOSES"}
+{"from": "api:GET:BankAccountAutoList", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "api:GET:SelectBankAccNumberAutoCom", "type": "EXPOSES"}
+{"from": "api:GET:SelectBankAccNumberAutoCom", "to": "svc:IRF_BANKService / RF_BANKService (+ IRF_BANK_BRANCHService / RF_BANK_BRANCHService for branch/account child data)", "type": "INJECTS"}
+{"from": "feat:cm-rf-bank-list", "to": "proc:pkg_common.rf_bank_select", "type": "CALLS"}
+{"from": "feat:cm-rf-bank-list", "to": "proc:pkg_common.rf_bank_insert", "type": "CALLS"}
+{"from": "feat:cm-rf-bank-list", "to": "proc:pkg_common.rf_bank_branch_select", "type": "CALLS"}
+{"from": "feat:cm-rf-bank-list", "to": "proc:pkg_common.rf_bank_branch_insert", "type": "CALLS"}
+{"from": "feat:cm-rf-bank-list", "to": "tbl:RF_BANK", "type": "USES_TABLE"}
+{"from": "feat:cm-rf-bank-list", "to": "tbl:RF_BANK_BRANCH", "type": "USES_TABLE"}
+{"from": "feat:cm-rf-bank-list", "to": "tbl:ACC_BANK_ACCOUNT", "type": "USES_TABLE"}
+{"from": "feat:cm-rf-bank-list", "to": "tbl:RF_BANK_AC_TYPE", "type": "USES_TABLE"}
+{"from": "feat:cm-rf-bank-list", "to": "model:RF_BANKModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-rf-bank-list", "to": "model:RF_BANK_BRANCHModel", "type": "MAPS_ROW"}
+{"from": "feat:cm-rf-bank-list", "to": "model:RF_BANK_FILTER", "type": "MAPS_ROW"}
+{"from": "feat:cm-rf-bank-list", "to": "model:RF_BANK_BRANCH_FILTER", "type": "MAPS_ROW"}
+{"from": "feat:cm-rf-bank-list", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:security-signin", "to": "feat:cm-rf-bank-list", "type": "UPSTREAM"}
+{"from": "mod:commercial", "to": "feat:cmr-ud-transfer", "type": "CONTAINS"}
+{"from": "feat:cmr-ud-transfer", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "USES_SERVICE"}
+{"from": "feat:cmr-ud-transfer", "to": "mvc:CmrController.UDTransfer", "type": "EXPOSES"}
+{"from": "feat:cmr-ud-transfer", "to": "api:POST:LcUD/UDTransferSave", "type": "EXPOSES"}
+{"from": "api:POST:LcUD/UDTransferSave", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "api:GET:LcUD/GetUDTransferInfo", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetUDTransferInfo", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "api:GET:LcUD/UDTransferFromDetailsByHId", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/UDTransferFromDetailsByHId", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "api:GET:LcUD/UDTransferToDetailsByHId", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/UDTransferToDetailsByHId", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "api:GET:LcUD/GetAllUDTransfer/{pageNo}/{pageSize}", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetAllUDTransfer/{pageNo}/{pageSize}", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "api:POST:LcUD/DeleteUDTransfer", "type": "EXPOSES"}
+{"from": "api:POST:LcUD/DeleteUDTransfer", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "api:GET:LcUD/GetTransferToUDDropDown", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetTransferToUDDropDown", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "api:GET:LcUD/GetUDDropDownByCommodity", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetUDDropDownByCommodity", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "api:GET:LcUD/GetUDDatailsForTransfer", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetUDDatailsForTransfer", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "api:GET:LcUD/GetUDDetailsForTransferTo", "type": "EXPOSES"}
+{"from": "api:GET:LcUD/GetUDDetailsForTransferTo", "to": "svc:ICM_UD_HService / CM_UD_HService", "type": "INJECTS"}
+{"from": "feat:cmr-ud-transfer", "to": "proc:PKG_CM_UD.CM_UD_TRANSFER_INSERT", "type": "CALLS"}
+{"from": "feat:cmr-ud-transfer", "to": "proc:PKG_CM_UD.CM_UD_TRANSFER_H_SELECT", "type": "CALLS"}
+{"from": "feat:cmr-ud-transfer", "to": "proc:PKG_CM_UD.UD_TRANSFER_DELETE", "type": "CALLS"}
+{"from": "feat:cmr-ud-transfer", "to": "proc:PKG_CM_UD.cm_ud_select_by_comodity", "type": "CALLS"}
+{"from": "feat:cmr-ud-transfer", "to": "tbl:CM_UD_TRANSFER_H", "type": "USES_TABLE"}
+{"from": "feat:cmr-ud-transfer", "to": "tbl:CM_UD_H", "type": "USES_TABLE"}
+{"from": "feat:cmr-ud-transfer", "to": "model:CM_UD_TRANSFER_H_MODEL", "type": "MAPS_ROW"}
+{"from": "feat:cmr-ud-transfer", "to": "model:CM_UD_FILTER_MODEL", "type": "MAPS_ROW"}
+{"from": "feat:cmr-ud-transfer", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:cmr-lc-ud", "to": "feat:cmr-ud-transfer", "type": "UPSTREAM"}
+{"from": "mod:merchandising", "to": "feat:mrc-buyer", "type": "CONTAINS"}
+{"from": "feat:mrc-buyer", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "USES_SERVICE"}
+{"from": "feat:mrc-buyer", "to": "mvc:MrcController.BuyerInfo", "type": "EXPOSES"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/BuyerByUserList", "type": "EXPOSES"}
+{"from": "api:GET:buyer/BuyerByUserList", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/getBuyerDropdownList", "type": "EXPOSES"}
+{"from": "api:GET:buyer/getBuyerDropdownList", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/getBuyerDropdownListByID/{MC_BYR_ACC_ID}", "type": "EXPOSES"}
+{"from": "api:GET:buyer/getBuyerDropdownListByID/{MC_BYR_ACC_ID}", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/GetBuyerListForDropdown", "type": "EXPOSES"}
+{"from": "api:GET:buyer/GetBuyerListForDropdown", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/SelectAll", "type": "EXPOSES"}
+{"from": "api:GET:buyer/SelectAll", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/Select/{ID:int}", "type": "EXPOSES"}
+{"from": "api:GET:buyer/Select/{ID:int}", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/GetCountryList", "type": "EXPOSES"}
+{"from": "api:GET:buyer/GetCountryList", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/GetCountryListDropdown", "type": "EXPOSES"}
+{"from": "api:GET:buyer/GetCountryListDropdown", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/GetPaginatedCountryListDropdown", "type": "EXPOSES"}
+{"from": "api:GET:buyer/GetPaginatedCountryListDropdown", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:POST:buyer/Save", "type": "EXPOSES"}
+{"from": "api:POST:buyer/Save", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:PUT:buyer/Update", "type": "EXPOSES"}
+{"from": "api:PUT:buyer/Update", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/GetBuyerListDropdown", "type": "EXPOSES"}
+{"from": "api:GET:buyer/GetBuyerListDropdown", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "api:GET:buyer/GetPaginatedBuyerDropdown", "type": "EXPOSES"}
+{"from": "api:GET:buyer/GetPaginatedBuyerDropdown", "to": "svc:IMC_BUYERService / MC_BUYERService", "type": "INJECTS"}
+{"from": "feat:mrc-buyer", "to": "proc:PKG_MERCHANDISING.mc_buyer_select", "type": "CALLS"}
+{"from": "feat:mrc-buyer", "to": "proc:PKG_MERCHANDISING.mc_buyer_insert", "type": "CALLS"}
+{"from": "feat:mrc-buyer", "to": "proc:PKG_MERCHANDISING.mc_buyer_update", "type": "CALLS"}
+{"from": "feat:mrc-buyer", "to": "tbl:MC_BUYER", "type": "USES_TABLE"}
+{"from": "feat:mrc-buyer", "to": "model:MC_BUYERModel", "type": "MAPS_ROW"}
+{"from": "feat:mrc-buyer", "to": "model:MC_BUYERFilter", "type": "MAPS_ROW"}
+{"from": "feat:mrc-buyer", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:security-signin", "to": "feat:mrc-buyer", "type": "UPSTREAM"}
+{"from": "mod:security", "to": "feat:security-signin", "type": "CONTAINS"}
+{"from": "feat:security-signin", "to": "svc:IScUserService.SignIn / SelectAll", "type": "USES_SERVICE"}
+{"from": "feat:security-signin", "to": "mvc:ScUserController.SignIn", "type": "EXPOSES"}
+{"from": "feat:security-signin", "to": "proc:PKG_SECURITY.sc_user_select", "type": "CALLS"}
+{"from": "feat:security-signin", "to": "tbl:SC_USER", "type": "USES_TABLE"}
+{"from": "feat:security-signin", "to": "model:LoginModel", "type": "MAPS_ROW"}
+{"from": "feat:security-signin", "to": "model:ScUserModel", "type": "MAPS_ROW"}
+{"from": "feat:security-signin", "to": "sess:multiScUserId", "type": "REQUIRES"}
+{"from": "feat:security-signin", "to": "sess:multiLoginEmpId", "type": "REQUIRES"}
+{"from": "feat:security-signin", "to": "sess:access_token", "type": "REQUIRES"}
+{"from": "feat:security-signin", "to": "sess:scRoleId", "type": "REQUIRES"}
+{"from": "feat:security-signin", "to": "feat:home-dashboard", "type": "DOWNSTREAM"}
+{"from": "tbl:ACC_COA_TYPE_CONFIG_H", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_COA_TYPE_CONFIG_H", "to": "model:\"n/a — no maintenance screen exists\"", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_COA_TYPE_CONFIG_H", "to": "pkg:PKG_ACCOUNTING (report-consumption side only)", "type": "HAS_PACKAGE"}
+{"from": "col:ACC_COA_TYPE_CONFIG_H.LK_COA_LAYER_ID", "to": "col:LOOKUP_DATA.LOOKUP_DATA_ID", "type": "FK_TO"}
+{"from": "col:ACC_COA_TYPE_CONFIG_H.LK_COA_TYPE_CONFIG_ID", "to": "col:LOOKUP_DATA.LOOKUP_DATA_ID", "type": "FK_TO"}
+{"from": "tbl:ACC_COST_CENTER", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_COST_CENTER", "to": "model:CostCenterModel", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_COST_CENTER", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "tbl:ACC_COST_CENTER", "to": "proc:PKG_ACCOUNTING.ac_cost_center_save", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_COST_CENTER", "to": "proc:PKG_ACCOUNTING.ac_cost_center_delete", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_COST_CENTER", "to": "proc:PKG_ACCOUNTING.ac_cost_center_select", "type": "HAS_PROCEDURE"}
+{"from": "col:ACC_COST_CENTER.HR_COMPANY_ID", "to": "col:HR_COMPANY.HR_COMPANY_ID", "type": "FK_TO"}
+{"from": "col:ACC_COST_CENTER.HR_OFFICE_ID", "to": "col:HR_OFFICE.HR_OFFICE_ID", "type": "FK_TO"}
+{"from": "tbl:ACC_COST_CENTER_GROUP", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_COST_CENTER_GROUP", "to": "model:CostCenterGroupModel", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_COST_CENTER_GROUP", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "tbl:ACC_COST_CENTER_GROUP", "to": "proc:PKG_ACCOUNTING.ac_cost_center_group_save", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_COST_CENTER_GROUP", "to": "proc:PKG_ACCOUNTING.ac_cost_center_group_delete", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_COST_CENTER_GROUP", "to": "proc:PKG_ACCOUNTING.ac_cost_center_group_select", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_DRAFT_VOUCHER", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_DRAFT_VOUCHER", "to": "model:DraftVoucherModel", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_DRAFT_VOUCHER", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "tbl:ACC_DRAFT_VOUCHER", "to": "proc:PKG_ACCOUNTING.acc_draft_voucher_save", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_DRAFT_VOUCHER", "to": "proc:PKG_ACCOUNTING.ACC_CONFIRM_INSERT", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_DRAFT_VOUCHER", "to": "proc:PKG_ACCOUNTING.acc_draft_voucher_select", "type": "HAS_PROCEDURE"}
+{"from": "col:ACC_DRAFT_VOUCHER.HR_COMPANY_ID", "to": "col:HR_COMPANY.HR_COMPANY_ID", "type": "FK_TO"}
+{"from": "col:ACC_DRAFT_VOUCHER.HR_OFFICE_ID", "to": "col:HR_OFFICE.HR_OFFICE_ID", "type": "FK_TO"}
+{"from": "col:ACC_DRAFT_VOUCHER.ACC_GL_LINK_COA_H_ID", "to": "col:ACC_GL_LINK_COA_H.ACC_GL_LINK_COA_H_ID", "type": "FK_TO"}
+{"from": "col:ACC_DRAFT_VOUCHER.LK_TRX_SRC_ID", "to": "col:LOOKUP_DATA.LOOKUP_DATA_ID", "type": "FK_TO"}
+{"from": "col:ACC_DRAFT_VOUCHER.RF_ACTN_STATUS_ID", "to": "col:RF_ACTN_STATUS.RF_ACTN_STATUS_ID", "type": "FK_TO"}
+{"from": "tbl:ACC_FISCAL_YEAR", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_FISCAL_YEAR", "to": "model:FiscalYearModel", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_FISCAL_YEAR", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "tbl:ACC_FISCAL_YEAR", "to": "proc:PKG_ACCOUNTING.ac_fiscal_year_close", "type": "HAS_PROCEDURE"}
+{"from": "col:ACC_FISCAL_YEAR.HR_COMPANY_ID", "to": "col:HR_COMPANY.HR_COMPANY_ID", "type": "FK_TO"}
+{"from": "col:ACC_FISCAL_YEAR.CREATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
+{"from": "col:ACC_FISCAL_YEAR.LAST_UPDATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
+{"from": "tbl:ACC_OPENING_BALANCE", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_OPENING_BALANCE", "to": "model:OpeningBalanceModel", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_OPENING_BALANCE", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "tbl:ACC_OPENING_BALANCE", "to": "proc:PKG_ACCOUNTING.ac_fiscal_year_close", "type": "HAS_PROCEDURE"}
+{"from": "col:ACC_OPENING_BALANCE.ACC_FISCAL_YEAR_ID", "to": "col:ACC_FISCAL_YEAR.ACC_FISCAL_YEAR_ID", "type": "FK_TO"}
+{"from": "col:ACC_OPENING_BALANCE.ACC_SUB_CLASS_ID", "to": "col:ACC_SUB_CLASS.ACC_SUB_CLASS_ID", "type": "FK_TO"}
+{"from": "col:ACC_OPENING_BALANCE.HR_COMPANY_ID", "to": "col:HR_COMPANY.HR_COMPANY_ID", "type": "FK_TO"}
+{"from": "col:ACC_OPENING_BALANCE.CREATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
+{"from": "col:ACC_OPENING_BALANCE.LAST_UPDATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
+{"from": "tbl:ACC_PAYMENT_MODE", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_PAYMENT_MODE", "to": "model:PaymentModeModel", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_PAYMENT_MODE", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "tbl:ACC_PAYMENT_MODE", "to": "proc:PKG_ACCOUNTING.ac_payment_mode_insert_update", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_PAYMENT_MODE", "to": "proc:PKG_ACCOUNTING.ac_payment_mode_delete", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_PAYMENT_MODE", "to": "proc:PKG_ACCOUNTING.ac_payment_mode_select", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_PAYMENT_MODE", "to": "proc:PKG_ACCOUNTING.ac_payment_mode_select_by_Id", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_REPORT_RECEIVEPAYMENT", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_REPORT_RECEIVEPAYMENT", "to": "model:\"n/a — shared staging table, not a real business entity\"", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_REPORT_RECEIVEPAYMENT", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "tbl:ACC_REPORT_TRIAL_BALANCE", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_REPORT_TRIAL_BALANCE", "to": "model:\"n/a — shared staging table, not a real business entity\"", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_REPORT_TRIAL_BALANCE", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "col:ACC_REPORT_TRIAL_BALANCE.ACC_SUB_CLASS_ID", "to": "col:ACC_SUB_CLASS.ACC_SUB_CLASS_ID", "type": "FK_TO"}
+{"from": "tbl:ACC_STOCK_HISTORY", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_STOCK_HISTORY", "to": "model:\"ACC_STOCK_CLOSING (naming mismatch — see docs site)\"", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_STOCK_HISTORY", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "col:ACC_STOCK_HISTORY.HR_COMPANY_ID", "to": "col:HR_COMPANY.HR_COMPANY_ID", "type": "FK_TO"}
+{"from": "col:ACC_STOCK_HISTORY.ACC_SUB_CLASS_ID", "to": "col:ACC_SUB_CLASS.ACC_SUB_CLASS_ID", "type": "FK_TO"}
+{"from": "tbl:ACC_SUB_CLASS", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_SUB_CLASS", "to": "model:\"n/a (Chart of Accounts hierarchy, leaf level)\"", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_SUB_CLASS", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "tbl:ACC_SUB_CLASS", "to": "proc:PKG_ACCOUNTING.ac_subclass_insert_update", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_SUB_CLASS", "to": "proc:PKG_ACCOUNTING.ac_subclass_delete", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_SUB_CLASS", "to": "proc:PKG_ACCOUNTING.ac_subclass_select", "type": "HAS_PROCEDURE"}
+{"from": "col:ACC_SUB_CLASS.ACC_MAP_CLASS_ID", "to": "col:ACC_MAP_CLASS.ACC_MAP_CLASS_ID", "type": "FK_TO"}
+{"from": "col:ACC_SUB_CLASS.LK_NATURE_ID", "to": "col:LOOKUP_DATA.LOOKUP_DATA_ID", "type": "FK_TO"}
+{"from": "tbl:ACC_VOUCHER_DETAIL", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_VOUCHER_DETAIL", "to": "model:VoucherDetailModel", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_VOUCHER_DETAIL", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "col:ACC_VOUCHER_DETAIL.ACC_SUB_CLASS_ID", "to": "col:ACC_SUB_CLASS.ACC_SUB_CLASS_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_DETAIL.PARENT_ID", "to": "col:ACC_VOUCHER_DETAIL.VOUCHER_DETAIL_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_DETAIL.LK_VOUCHER_FOR_TYPE_ID", "to": "col:LOOKUP_DATA.LOOKUP_DATA_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_DETAIL.COST_CENTER_ID", "to": "col:ACC_COST_CENTER.COST_CENTER_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_DETAIL.VOUCHER_MASTER_ID", "to": "col:ACC_VOUCHER_MASTER.VOUCHER_MASTER_ID", "type": "FK_TO"}
+{"from": "tbl:ACC_VOUCHER_MASTER", "to": "mod:accounting", "type": "BELONGS_TO"}
+{"from": "tbl:ACC_VOUCHER_MASTER", "to": "model:VoucherModel", "type": "MAPS_MODEL"}
+{"from": "tbl:ACC_VOUCHER_MASTER", "to": "pkg:PKG_ACCOUNTING", "type": "HAS_PACKAGE"}
+{"from": "tbl:ACC_VOUCHER_MASTER", "to": "proc:PKG_ACCOUNTING.acc_master_vch_save", "type": "HAS_PROCEDURE"}
+{"from": "tbl:ACC_VOUCHER_MASTER", "to": "proc:PKG_ACCOUNTING.acc_voucher_post_unpost", "type": "HAS_PROCEDURE"}
+{"from": "col:ACC_VOUCHER_MASTER.CREATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_MASTER.HR_COMPANY_ID", "to": "col:HR_COMPANY.HR_COMPANY_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_MASTER.HR_OFFICE_ID", "to": "col:HR_OFFICE.HR_OFFICE_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_MASTER.PAYMENT_MODE_ID", "to": "col:ACC_PAYMENT_MODE.PAYMENT_MODE_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_MASTER.LAST_UPDATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_MASTER.VOUCHER_TYPE_ID", "to": "col:ACC_VOUCHER_TYPE.VOUCHERTYPEID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_MASTER.LK_TRX_SRC_ID", "to": "col:LOOKUP_DATA.LOOKUP_DATA_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_MASTER.RF_ACTN_STATUS_ID", "to": "col:RF_ACTN_STATUS.RF_ACTN_STATUS_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_MASTER.ACC_GL_LINK_COA_H_ID", "to": "col:ACC_GL_LINK_COA_H.ACC_GL_LINK_COA_H_ID", "type": "FK_TO"}
+{"from": "col:ACC_VOUCHER_MASTER.LK_VOUCHER_SRC_TYPE_ID", "to": "col:LOOKUP_DATA.LOOKUP_DATA_ID", "type": "FK_TO"}
+{"from": "tbl:HR_DEPARTMENT", "to": "mod:admin", "type": "BELONGS_TO"}
+{"from": "tbl:HR_DEPARTMENT", "to": "model:HrDepartmentModel", "type": "MAPS_MODEL"}
+{"from": "tbl:HR_DEPARTMENT", "to": "pkg:PKG_ADMIN", "type": "HAS_PACKAGE"}
+{"from": "tbl:HR_DEPARTMENT", "to": "proc:PKG_ADMIN.hr_department_select", "type": "HAS_PROCEDURE"}
+{"from": "col:HR_DEPARTMENT.CREATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
+{"from": "col:HR_DEPARTMENT.LK_DEPT_TYPE_GRP_ID", "to": "col:LOOKUP_DATA.LOOKUP_DATA_ID", "type": "FK_TO"}
+{"from": "col:HR_DEPARTMENT.PARENT_ID", "to": "col:HR_DEPARTMENT.HR_DEPARTMENT_ID", "type": "FK_TO"}
+{"from": "col:HR_DEPARTMENT.LAST_UPDATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
+{"from": "tbl:MC_BUYER", "to": "mod:merchandising", "type": "BELONGS_TO"}
+{"from": "tbl:MC_BUYER", "to": "model:MC_BUYERModel", "type": "MAPS_MODEL"}
+{"from": "tbl:MC_BUYER", "to": "pkg:PKG_MERCHANDISING", "type": "HAS_PACKAGE"}
+{"from": "tbl:MC_BUYER", "to": "proc:PKG_MERCHANDISING.mc_buyer_insert", "type": "HAS_PROCEDURE"}
+{"from": "tbl:MC_BUYER", "to": "proc:PKG_MERCHANDISING.mc_buyer_update", "type": "HAS_PROCEDURE"}
+{"from": "tbl:MC_BUYER", "to": "proc:PKG_MERCHANDISING.mc_buyer_select", "type": "HAS_PROCEDURE"}
+{"from": "col:MC_BUYER.HR_COUNTRY_ID", "to": "col:HR_COUNTRY.HR_COUNTRY_ID", "type": "FK_TO"}
+{"from": "col:MC_BUYER.CREATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
+{"from": "col:MC_BUYER.RF_PAYM_TERM_ID", "to": "col:RF_PAYM_TERM.RF_PAYM_TERM_ID", "type": "FK_TO"}
+{"from": "col:MC_BUYER.RF_BANK_ID", "to": "col:RF_BANK.RF_BANK_ID", "type": "FK_TO"}
+{"from": "col:MC_BUYER.LAST_UPDATED_BY", "to": "col:SC_USER.SC_USER_ID", "type": "FK_TO"}
